@@ -79,15 +79,44 @@ body {
   background-color: #2d2e32;
 }
 
+body::selection {
+  color: #000000;
+  background: #64f4ac;
+}
+
+::-webkit-scrollbar{
+  width: 10px;
+}
+
+::-webkit-scrollbar-track{
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb{
+  background: #CACACA;
+  transition: 0.3s ease;
+  border-radius: 15px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+  background: #FEFEFE;
+}
+
+
+
 /* ---------- SECTION HEADER ---------- */
 #header {
   padding: 20px 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #2d2e32;
+  background-color: #2d2e3273;
+  border: 1px solid #2d2e3240;
+  box-shadow: 0 0 10px 1px #00000040;
+  backdrop-filter: blur(15px);
   color: #fefefe;
   position: sticky;
+  z-index: 1;
   top: 0;
   left: 0;
   margin: 0;
@@ -474,11 +503,11 @@ body {
 }
 
 .project-card-2 {
-  background: linear-gradient(180deg, #2c2940, #5a4073);
+  background: linear-gradient(225deg, #2c2940, #5a4073);
 }
 
 .project-card-3 {
-  background: linear-gradient(180deg, #01403A, #025951);
+  background: linear-gradient(225deg, #01403A, #025951);
 }
 
 .project-card .title {
@@ -572,4 +601,320 @@ body {
   font-weight: 600;
   letter-spacing: -1px;
   line-height: 26px;
+}
+
+/* ----------TESTIMONIAL---------- */
+#testimonial {
+  height: 100vh;
+  width: 100%;
+  padding: 100px 150px;
+}
+
+.testimonial-title {
+  display: flex;
+  flex-direction: row;
+  max-width: 50%;
+  justify-content: space-between;
+  align-items: end;
+}
+
+.testimonial-title h4 {
+  margin: 0;
+  padding: 0;
+}
+
+.testimonial-title p {
+  color: #7c7d81;
+  font-size: 14px;
+  align-self: end;
+  letter-spacing: -0.5px;
+  font-weight: 600;
+  margin: 6px;
+}
+
+.testimonial-card {
+  max-height: 300px;
+  width: 100%;
+  background-color: #25262a;
+  padding: 40px 50px;
+  border-radius: 8px;
+  margin: 30px 0;
+}
+
+.star-rating {
+  display: flex;
+  flex-direction: row;
+  color: #64f4ac;
+  align-items: center;
+  margin: 0 0 20px 0;
+  padding: 0;
+}
+
+.star-rating i {
+  margin: 0 3px;
+}
+
+.star-rating p {
+  margin: 0 10px;
+  padding: 0;
+  font-size: 14px;
+  color: #7c7d81;
+}
+
+.testimonial-card h4 {
+  font-family: "Raleway", sans-serif;
+  font-size: 24px;
+  line-height: 36px;
+  max-width: 85%;
+}
+
+.testimonial-card i:last-child {
+  position: relative;
+  top: -100px;
+  left: 1000px;
+  color: #FFFFFF40;
+  font-size: 60px;
+  margin: 0;
+  padding: 0;
+}
+
+.client-profile-card {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 20px 0;
+  cursor: pointer;
+  width: 95%;
+}
+
+.single-profile-card {
+  display: flex;
+  flex-direction: row;
+  height: 100px;
+  width: 30%;
+  border-bottom: 3px dashed #7c7d81;
+  align-items: center;
+}
+
+.single-profile-card.profile-card-active {
+  border-bottom: 3px dashed #64f4ac;
+}
+
+.single-profile-card img {
+  max-height: 50px;
+  max-width: 50px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.single-profile-card div h4 {
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+}
+
+.single-profile-card div p {
+  margin: 4px 0;
+  padding: 0;
+  font-size: 12px;
+  color: #7c7d81;
+}
+
+.single-profile-card div p a {
+  color: #64f4ac;
+  text-decoration: none;
+}
+
+.single-profile-card div p a:hover{
+  text-decoration: underline;
+}
+
+/* ----------FOOTER---------- */
+#footer {
+  display: flex;
+  flex-direction: row;
+  padding: 100px;
+  background-color: #25262a;
+  height: 100vh;
+}
+
+.footer-left {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.footer-left h2 {
+  font-size: 32px;
+  line-height: 40px;
+}
+
+.footer-left h2 a {
+  color: #64f4ac;
+  text-underline-offset: 8px;
+}
+
+.email-form {
+  display: flex;
+  flex-direction: column;
+  height: 300px;
+  width: 80%;
+  justify-content: space-between;
+  border-radius: 10px;
+  padding: 60px 25% 40px 20px;
+  border: 1px solid #2d2e3240;
+  background-color: #2d2e3273;
+  box-shadow: 0 0 10px 1px #00000040;
+  backdrop-filter: blur(15px);
+  background-image: url(assets/email-background.png);
+  background-size: cover;
+}
+
+.email-form h2 {
+  font-size: 30px;
+  letter-spacing: -1.5px;
+}
+
+.email-form h2 span {
+  font-weight: 600;
+  color: #64f4ac;
+}
+
+.email-form input {
+  height: 36px;
+  margin: 0;
+  border-radius: 8px;
+  border: none;
+  padding: 4px 8px;
+}
+
+.email-form div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.email-form div input {
+  width: 65%;
+}
+
+.email-form div button {
+  height: 36px;
+  width: 100px;
+  margin: 0;
+  border-radius: 8px;
+  border: none;
+  background-color: #64f4ac;
+  cursor: pointer;
+  color: #25262a;
+  font-size: 16px;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.email-form div button:hover {
+  background-color: #45A877;
+}
+
+.footer-title {
+  display: flex;
+  flex-direction: row;
+}
+
+.footer-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 185px 0 15px 0;
+}
+
+.footer-email-intro {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-email-intro p {
+  font-size: 12px;
+  color: #7c7d81;
+  font-weight: 600;
+}
+
+.footer-email-intro h6 {
+  font-size: 18px;
+  font-weight: 400;
+  color: #7C7D81;
+  margin-top: 10px;
+}
+
+.footer-email-intro h3 {
+  font-size: 26px;
+  color: #FFF;
+  font-weight: 400;
+  margin: 10px 0;
+}
+
+.footer-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.footer-menu li {
+  list-style: none;
+  padding: 0 20px;
+  position: relative;
+  margin: 5px 0;
+}
+
+.footer-menu .active {
+  color: #64f4ac;
+  font-weight: 900;
+}
+
+.footer-menu li a {
+  color: #fefefe;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.footer-menu li a:hover {
+  color: #64f4ac;
+  font-weight: 900;
+}
+
+.social-icons i {
+  color: #FFF;
+  margin: 0 5px;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+.social-icons i:nth-child(1):hover {
+  color: #0072b1;
+}
+
+.social-icons i:nth-child(3):hover {
+  color: #ea4335;
+}
+
+.social-icons i:nth-child(4):hover {
+  color: #00acee;
+}
+
+.social-icons i:nth-child(5):hover {
+  color: transparent;
+  background: -webkit-radial-gradient(30% 107%, circle, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  background: -o-radial-gradient(30% 107%, circle, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  background: -webkit-radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+.social-icons i:nth-child(6):hover {
+  color: #3b5998;
 }
