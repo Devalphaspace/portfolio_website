@@ -341,7 +341,7 @@ body::selection {
   border-radius: 50%;
   transform-origin: center;
   transform-style: preserve-3d;
-  transform: rotateY(calc(var(--i) * calc(360deg / 11))) translateZ(300px);
+  transform: rotateY(calc(var(--i) * calc(360deg / 15))) translateZ(300px);
 }
 
 .circle span img {
@@ -431,6 +431,7 @@ body::selection {
 }
 
 .introduction-text {
+  display: block;
   min-width: 50%;
   padding-right: 175px;
 }
@@ -639,6 +640,7 @@ body::selection {
   padding: 40px 50px;
   border-radius: 8px;
   margin: 30px 0;
+  display: block;
 }
 
 .star-rating {
@@ -694,9 +696,12 @@ body::selection {
   width: 30%;
   border-bottom: 3px dashed #7c7d81;
   align-items: center;
+  padding: 10px;
+  border-radius: 10px;
 }
 
 .single-profile-card.profile-card-active {
+  background-color: #25262a;
   border-bottom: 3px dashed #64f4ac;
 }
 
@@ -886,26 +891,30 @@ body::selection {
   font-weight: 900;
 }
 
-.social-icons i {
+.social-icons a {
+  text-decoration: none;
+}
+
+.social-icons a i {
   color: #FFF;
   margin: 0 5px;
   transition: 0.3s ease;
   cursor: pointer;
 }
 
-.social-icons i:nth-child(1):hover {
+.social-icons a:nth-child(1) i:hover {
   color: #0072b1;
 }
 
-.social-icons i:nth-child(3):hover {
+.social-icons a:nth-child(3) i:hover {
   color: #ea4335;
 }
 
-.social-icons i:nth-child(4):hover {
+.social-icons a:nth-child(4) i:hover {
   color: #00acee;
 }
 
-.social-icons i:nth-child(5):hover {
+.social-icons a:nth-child(5) i:hover {
   color: transparent;
   background: -webkit-radial-gradient(30% 107%, circle, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
   background: -o-radial-gradient(30% 107%, circle, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
@@ -915,6 +924,6 @@ body::selection {
   -webkit-background-clip: text;
 }
 
-.social-icons i:nth-child(6):hover {
+.social-icons a:nth-child(6) i:hover {
   color: #3b5998;
 }
